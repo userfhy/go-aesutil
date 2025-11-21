@@ -65,5 +65,4 @@ go test -bench=. -benchmem
 ## 注意事项
 - Key 必须为 32 字节（AES-256），IV 必须为 16 字节（AES 块大小）。长度由 [`main.validateKeyIV`](main.go) 校验。
 - 加密输出为标准 Base64 编码，解密函数会对 Base64 解码及 PKCS7 填充进行严格校验（实现位于 [`main.pkcs7Pad`](main.go) / [`main.pkcs7Unpad`](main.go)）。
-
 ```
